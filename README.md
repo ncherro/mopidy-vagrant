@@ -32,3 +32,12 @@ You should get a sound if everything has installed correctly
     $ mopidy &
     $ mpc add spotify:track:1QXzQKmQiDOzGHwSXVdHTp
     $ mpc play
+
+## Test mopidy from your browser ##
+
+    $ git submodule init
+    $ git submodule update
+
+[bbox](https://github.com/ncherro/bbox) is a HTTP client that works with Mopidy
+
+Once installed, you will be able to access the client at http://localhost:4567

@@ -1,2 +1,11 @@
+MPD_SERVER_HOSTNAME = u'::'
 SPOTIFY_USERNAME = u'<%= @spotify_username %>'
 SPOTIFY_PASSWORD = u'<%= @spotify_password %>'
+HTTP_SERVER_HOSTNAME = u'<%= @http_server_hostname %>'
+HTTP_SERVER_PORT = <%= @http_server_port %>
+HTTP_SERVER_STATIC_DIR = u'<%= @http_server_static_dir %>'
+FRONTENDS = (
+  u'mopidy.frontends.mpd.MpdFrontend',
+  u'mopidy.frontends.mpris.MprisFrontend',
+  u'mopidy.frontends.http.HttpFrontend',
+)

@@ -55,7 +55,10 @@ template "/home/#{system_username}/.config/mopidy/settings.py" do
   group system_username
   variables(
     :spotify_username => node[:mopidy][:spotify_username],
-    :spotify_password => node[:mopidy][:spotify_password]
+    :spotify_password => node[:mopidy][:spotify_password],
+    :http_server_hostname => node[:mopidy][:http_server_hostname],
+    :http_server_port => node[:mopidy][:http_server_port],
+    :http_server_static_dir => node[:mopidy][:http_server_static_dir]
   )
 end
 
@@ -77,6 +80,24 @@ end
 
 #### MPD CLIENT ####
 apt_package "mpc"
+
+
+#### HTTP LIBRARY ####
+bash "Install cherrypy" do
+  code "sudo pip install -U cherrypy"
+  action :run
+end
+
+
+#### WEB SOCKET LIBRARY ####
+bash "Install ws4py" do
+  code "sudo pip install -U ws4py"
+  action :run
+end
+
+
+#### WEB SOCKET LIBRARY ####
+#apt_package "python-ws4py"
 
 
 #### SYSTEM AUDIO SETUP ####
