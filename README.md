@@ -16,7 +16,7 @@ Get yourself a copy of [Vagrant](http://vagrantup.com)
 ## Set your environment variables ##
 
     $ export SPOTIFY_USERNAME=my_username
-    $ export SPOTIFY_USERNAME=my_password
+    $ export SPOTIFY_PASSWORD=my_password
 
 Either set these in your `~/.bashrc` or `~/.zshrc` file, or run them in
 your terminal window _before_ running `vagrant up` or `vagrant reload`
