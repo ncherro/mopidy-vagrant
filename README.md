@@ -1,22 +1,34 @@
 # Mopidy install using Vagrant & Chef #
 
-An Ubuntu Lucid install of the latest dev version of [Mopidy](http://www.mopidy.com).
+An Ubuntu Lucid install of the latest dev version of
+[Mopidy](http://www.mopidy.com), with the [BBox](https://github.com/ncherro/bbox) HTTP frontend.
 
 Handles the installation of all relevant dependencies for Mopidy.
 
-You will need to set the environment variables `SPOTIFY_USERNAME` and `SPOTIFY_PASSWORD` with your [Spotify](http://www.spotify.com/) premium credentials.
+You will need to set the environment variables `SPOTIFY_USERNAME` and
+`SPOTIFY_PASSWORD` with your [Spotify](http://www.spotify.com/) premium
+credentials.
 
 ## Install Vagrant ##
 
 Get yourself a copy of [Vagrant](http://vagrantup.com)
 
+## Set your environment variables ##
+
+    $ export SPOTIFY_USERNAME=my_username
+    $ export SPOTIFY_USERNAME=my_password
+
+Either set these in your `~/.bashrc` or `~/.zshrc` file, or run them in
+your terminal window _before_ running `vagrant up` or `vagrant reload`
+
 ## Install the VM ##
 
-    $ git clone git@github.com:paulsturgess/mopidy-vagrant.git
+    $ git clone git@github.com:ncherro/mopidy-vagrant.git
     $ cd mopidy-vagrant
     $ vagrant up
 
-The first time the box is installed will take a while as a copy of the Ubuntu VM will need to be downloaded.
+The first time the box is installed will take a while as a copy of the
+Ubuntu VM will need to be downloaded.
 
 ## Test your audio ##
 
