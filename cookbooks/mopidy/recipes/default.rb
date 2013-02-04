@@ -58,7 +58,8 @@ template "/home/#{system_username}/.config/mopidy/settings.py" do
     :spotify_password => node[:mopidy][:spotify_password],
     :http_server_hostname => node[:mopidy][:http_server_hostname],
     :http_server_port => node[:mopidy][:http_server_port],
-    :http_server_static_dir => node[:mopidy][:http_server_static_dir]
+    :http_server_static_dir => node[:mopidy][:http_server_static_dir],
+    :local_music_path => node[:mopidy][:local_music_path]
   )
 end
 
@@ -94,10 +95,6 @@ bash "Install ws4py" do
   code "sudo pip install -U ws4py"
   action :run
 end
-
-
-#### WEB SOCKET LIBRARY ####
-#apt_package "python-ws4py"
 
 
 #### SYSTEM AUDIO SETUP ####
