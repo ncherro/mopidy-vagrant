@@ -2,3 +2,4 @@
 .vagrant
 
 /music/*
+tag_cache

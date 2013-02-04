@@ -17,6 +17,7 @@ Vagrant::Config.run do |config|
         :http_server_port => 6680,
         :http_server_static_dir => '/vagrant/www',
         :local_music_path => '/vagrant/music',
+        :local_tag_cache_file => '/vagrant/tag_cache',
       }
     }
   end

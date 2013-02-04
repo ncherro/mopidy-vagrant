@@ -59,7 +59,8 @@ template "/home/#{system_username}/.config/mopidy/settings.py" do
     :http_server_hostname => node[:mopidy][:http_server_hostname],
     :http_server_port => node[:mopidy][:http_server_port],
     :http_server_static_dir => node[:mopidy][:http_server_static_dir],
-    :local_music_path => node[:mopidy][:local_music_path]
+    :local_music_path => node[:mopidy][:local_music_path],
+    :local_tag_cache_file => node[:mopidy][:local_tag_cache_file]
   )
 end
 
