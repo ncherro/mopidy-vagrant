@@ -47,9 +47,12 @@ You should get a sound if everything has installed correctly
 
 ## Test mopidy from your browser ##
 
+[bbox](https://github.com/ncherro/bbox) is a HTTP client that works with
+Mopidy.  It's installed as a submodule.  To pull it down, run this in
+this project's root:
+
     $ git submodule init
     $ git submodule update
 
-[bbox](https://github.com/ncherro/bbox) is a HTTP client that works with Mopidy
-
-Once installed, you will be able to access the client at http://localhost:4567
+Once everything is up and running, you will be able to access the client
+at http://localhost:4567
